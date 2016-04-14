@@ -1,0 +1,21 @@
+<ion-view view-title="Grupos">
+            <!--<ion-nav-buttons side="right">
+                <button class="button button-icon ion-ios-plus-empty" ui-sref="tabs.lead_detail"></button>
+            </ion-nav-buttons>-->
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="grupo in grupos" type="item-text-wrap" href="#/tab/grupos/{{grupo.id}}">
+        <img ng-src="{{grupo.foto}}">
+        <h2>{{grupo.nome}}</h2>
+        <p>{{grupo.cidade}} - {{grupo.uf}}</p>
+        <p style="font-style:italic;">&ldquo;{{grupo.frase}}&ldquo;</p>
+        <span class="badge badge-balanced">{{grupo.emendas.length}}</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button ng-if="usuario.id!=0" class="button-calm" ng-click="inscrever(grupo)">
+          Inscrever
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

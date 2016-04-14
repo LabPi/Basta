@@ -50,6 +50,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.mapa', {
+    url: '/mapa',
+    views: {
+      'tab-mapa': {
+        templateUrl: 'templates/tab-mapa.html',
+        controller: 'MapaCtrl'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -69,12 +79,31 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.grupos', {
+      url: '/grupos',
+      views: {
+        'tab-grupos': {
+          templateUrl: 'templates/tab-grupos.html',
+          controller: 'GruposCtrl'
+        }
+      }
+    })
+    .state('tab.grupo-detail', {
+      url: '/grupos/:grupoId',
+      views: {
+        'tab-grupos': {
+          templateUrl: 'templates/grupo-detail.html',
+          controller: 'GrupoDetailCtrl'
+        }
+      }
+    })
+
+  .state('tab.perfil', {
+    url: '/perfil',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-perfil': {
+        templateUrl: 'templates/tab-perfil.html',
+        controller: 'PerfilCtrl'
       }
     }
   });
