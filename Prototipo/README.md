@@ -1,6 +1,8 @@
 Basta! - Protótipo
 ==================
 
+<img width="114px" align="right" hspace="10" vspace="5" src="https://raw.githubusercontent.com/h2atecnologia/Basta/master/Prototipo/Basta/resources/icon/icon@2x.png">
+
 Nosso protótipo consiste de um projeto [Cordova][cordova], utilizando o framework [Ionic][ionic] (HTML, Css, Javascript, Ajax, [Angular][angular]).
 
 Para o produto final, pretendemos acrescer o framework [LeafletJS][leafletjs] com cartografia [OpenStreetMap][openstreetmap] e conceito de cluster.
