@@ -18,13 +18,13 @@ Se você pretente alterar o projeto ou executá-lo dentro de um ambiente Cordova
 
 Após isto, mova-se até a pasta `/Basta/Prototipo/Basta` através do prompt de shell de seu sistema operacional e execute o comando: `ionic serve`.
 
-<img width="360px" align="left" hspace="0" vspace="5" src="https://raw.githubusercontent.com/h2atecnologia/Basta/master/Prototipo/Instrucoes/ionic_ou_html.png">
+<img width="360px" hspace="0" vspace="5" src="https://raw.githubusercontent.com/h2atecnologia/Basta/master/Prototipo/Instrucoes/ionic_ou_html.png">
 
 Desta maneira você poderá simular a app em um browser.
 
 Se preferir, poderá ver a app simulando iOS e Android, lado a lado com o comando: `ionic serve --lab`
 
-<img width="600px" align="left" hspace="0" vspace="5" src="https://raw.githubusercontent.com/h2atecnologia/Basta/master/Prototipo/Instrucoes/ionic_lado_a_lado.png">
+<img width="600px" hspace="0" vspace="5" src="https://raw.githubusercontent.com/h2atecnologia/Basta/master/Prototipo/Instrucoes/ionic_lado_a_lado.png">
 
 Se pretente somente funcionar a app, lembre-se que este é um projeto HTML. Portanto, vá até a pasta `/Basta/Prototipo/Basta/www` e abra o arquivo `index.html` em seu browser.
 
