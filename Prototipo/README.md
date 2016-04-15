@@ -1,4 +1,13 @@
 Basta! - Protótipo
 ==================
 
-Este protótipo consiste de um projeto em Cordova, utilizando o framework Ionic e Angular, inicialmente visando a plataforma iOS.
+Nosso protótipo consiste de um projeto Cordova, utilizando o framework Ionic (HTML, Css, Javascript, Ajax, Angular).
+
+Para o produto final, pretendemos acrescer o framework LeafletJS com cartografia OpenStreetMap e conceito de cluster.
+
+Inicialmente visamos a plataforma iOS e sendo assim, utilizamos navegação e iconografia aderentes ao guidance da mesma.
+
+Este mesmo projeto, pode ser facilmente reaproveitado para plataforma Android, também respeitando seu guidance.
+
+Não é contemplado, dados vivos nem algum serviço backend para os dados simulados. Os dados são hardcode.
+
