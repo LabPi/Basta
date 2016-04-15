@@ -38,7 +38,7 @@ Se pretente somente funcionar a app, lembre-se que este é um projeto HTML. Port
 
 ## Licença
 
-Este projeto de software é licenciado sob a [GPL v2.0 ou superior / GNU General Public License v2.0][gpl-2.0].
+Este projeto de software é licenciado sob a [GPL v2.0 ou superior][gpl-2.0-pt-br] / [GNU General Public License v2.0][gpl-2.0].
 
 [cordova]: https://cordova.apache.org
 [ionic]: http://ionicframework.com/
@@ -46,4 +46,5 @@ Este projeto de software é licenciado sob a [GPL v2.0 ou superior / GNU General
 [leafletjs]: http://leafletjs.com/
 [openstreetmap]: http://www.openstreetmap.org/copyright
 [nodejs]: https://nodejs.org/en/
+[gpl-2.0-pt-br]: http://www.magnux.org/doc/GPL-pt_BR.txt
 [gpl-2.0]: https://opensource.org/licenses/GPL-2.0
