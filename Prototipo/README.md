@@ -11,11 +11,13 @@ Este mesmo projeto, pode ser facilmente reaproveitado para plataforma Android, t
 
 Não é contemplado, dados vivos nem algum serviço backend para os dados simulados. Os dados são hardcode.
 
+
 ## Contribua!
 
 1. Faça um fork deste projeto
 2. Envie seus comentários e críticas
 3. Contribua com seu valioso código
+
 
 ## Licença
 

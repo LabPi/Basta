@@ -17,8 +17,8 @@ Para atingir nosso objetivo, adotamos os seguintes conceitos:
 - compartilhamento e divisão das tarefas (via tarefas e TODOs)
 - divulgação de informações e técnicas (chat ou forum interno)
 
-Nosso time
-==========
+
+## Nosso time
 
 - Luiz Henrique Dias de Souza (líder) - analista de sistema e desenvolvedor mobile
 - Luciano Cesar de Oliveira Souza - designer e desenvolvedor digital
