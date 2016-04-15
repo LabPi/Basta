@@ -3,6 +3,8 @@ Basta!
 
 <img width="320px" align="right" hspace="10" vspace="5" src="https://raw.githubusercontent.com/h2atecnologia/Basta/master/Prototipo/Basta/resources/splash/Default~iphone.png">
 
+<img width="114px" align="right" hspace="10" vspace="15" src="https://raw.githubusercontent.com/h2atecnologia/Basta/master/Prototipo/Basta/resources/icon/icon%402x.png">
+
 Basta! é um projeto mobile coletivo voltado ao enfrentamento da corrupção e acompanhamento do uso do dinheiro público.
 
 Para enfrentar, entendemos que é preciso:
