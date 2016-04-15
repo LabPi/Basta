@@ -20,8 +20,6 @@ Para atingir nosso objetivo, adotamos os seguintes conceitos:
 Nosso time
 ==========
 
-<img width="114px" align="right" hspace="10" vspace="5" src="https://raw.githubusercontent.com/h2atecnologia/Basta/master/Prototipo/Basta/resources/icon/icon%402x.png">
-
 - Luiz Henrique Dias de Souza (líder) - analista de sistema e desenvolvedor mobile
 - Luciano Cesar de Oliveira Souza - designer e desenvolvedor digital
 - Roberta Cristina Boas de Oliveira - designer digital
