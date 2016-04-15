@@ -33,7 +33,7 @@ Se pretente somente funcionar a app, lembre-se que este é um projeto HTML. Port
 
 1. Faça um fork deste projeto
 2. Envie seus comentários e críticas
-3. Contribua com seu valioso código
+3. Contribua nos enviando seu valioso código
 
 
 ## Licença
