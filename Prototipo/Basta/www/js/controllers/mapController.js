@@ -32,18 +32,6 @@ angular.module('starter').controller('MapController',
           $scope.locations = LocationsService.savedLocations;
           $scope.newLocation;
 
-          /*if(!InstructionsService.instructions.newLocations.seen) {
-
-            var instructionsPopup = $ionicPopup.alert({
-              title: 'Add Locations',
-              template: InstructionsService.instructions.newLocations.text
-            });
-            instructionsPopup.then(function(res) {
-              InstructionsService.instructions.newLocations.seen = true;
-              });
-
-          }*/
-
           $scope.map = {
             defaults: {
               tileLayer: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
@@ -70,24 +58,6 @@ angular.module('starter').controller('MapController',
         this.lng  = "";
         this.name = "";
       };
-
-      /*$ionicModal.fromTemplateUrl('templates/addLocation.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-      }).then(function(modal) {
-          $scope.modal = modal;
-        });
-      */
-
-      /**
-       * Detect user long-pressing on map to add new location
-       */
-      /*$scope.$on('leafletDirectiveMap.contextmenu', function(event, locationEvent){
-        $scope.newLocation = new Location();
-        $scope.newLocation.lat = locationEvent.leafletEvent.latlng.lat;
-        $scope.newLocation.lng = locationEvent.leafletEvent.latlng.lng;
-        $scope.modal.show();
-      });*/
 
       $scope.saveLocation = function() {
         LocationsService.savedLocations.push($scope.newLocation);
