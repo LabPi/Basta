@@ -1,9 +1,9 @@
 Basta! - Protótipo
 ==================
 
-Nosso protótipo consiste de um projeto Cordova, utilizando o framework Ionic (HTML, Css, Javascript, Ajax, Angular).
+Nosso protótipo consiste de um projeto [Cordova][cordova], utilizando o framework [Ionic][ionic] (HTML, Css, Javascript, Ajax, [Angular][angular]).
 
-Para o produto final, pretendemos acrescer o framework LeafletJS com cartografia OpenStreetMap e conceito de cluster.
+Para o produto final, pretendemos acrescer o framework [LeafletJS][leafletjs] com cartografia [OpenStreetMap][openstreetmap] e conceito de cluster.
 
 Inicialmente visamos a plataforma iOS e sendo assim, utilizamos navegação e iconografia aderentes ao guidance da mesma.
 
@@ -21,4 +21,9 @@ Não é contemplado, dados vivos nem algum serviço backend para os dados simula
 
 Este projeto de software é licenciado sob a [GPL v2.0 ou superior / GNU General Public License v2.0][gpl-2.0].
 
+[cordova]: https://cordova.apache.org
+[ionic]: http://ionicframework.com/
+[angular]: https://angularjs.org/
+[leafletjs]: http://leafletjs.com/
+[openstreetmap]: http://www.openstreetmap.org/copyright
 [gpl-2.0]: https://opensource.org/licenses/GPL-2.0
