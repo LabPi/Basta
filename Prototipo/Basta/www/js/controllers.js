@@ -1,8 +1,15 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, Emendas) {
 
-.controller('MapaCtrl', function($scope) {})
+  $scope.all = Emendas.all();
+  $scope.last = Emendas.last(10);
+
+})
+
+.controller('MapaCtrl', function($scope) {
+
+})
 
 .controller('GruposCtrl', function($scope, Grupos, Usuarios) {
   // With the new view caching in Ionic, Controllers are only called
@@ -21,12 +28,53 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('GrupoDetailCtrl', function($scope, $stateParams, Grupos) {
+.controller('GrupoDetailCtrl', function($scope, $stateParams, Grupos, Usuarios) {
+
+  $scope.usuario = Usuarios.get(-1);
+
   $scope.grupo = Grupos.get($stateParams.grupoId);
+
+  $scope.inscrever = function(grupo) {
+    Grupos.inscrever(grupo.id, Usuarios.get(-1));
+  };
 })
 
-.controller('PerfilCtrl', function($scope) {
+.controller('PerfilCtrl', function($scope, $state, Usuarios, LOGGED) {
+
+  $scope.login = {email: '', senha: ''};
+
+  $scope.usuario = Usuarios.get(-1);
+
+  $scope.doLogin = function() {
+
+    Usuarios.get(-1).id = 1;
+    Usuarios.get(-1).nome = 'Fulano de Tal';
+    Usuarios.get(-1).email = $scope.login.email;
+    Usuarios.get(-1).cidade = 'Brasília';
+    Usuarios.get(-1).uf = 'DF';
+
+    LOGGED.b = true;
+
+    $state.go('tab.dash');
+
+  };
+
+  $scope.doSave = function(frm) {
+
+    Usuarios.get(-1).id = 1;
+    Usuarios.get(-1).nome = $scope.usuario.nome;
+    Usuarios.get(-1).email = $scope.usuario.email;
+    Usuarios.get(-1).cidade = $scope.usuario.cidade;
+    Usuarios.get(-1).uf = $scope.usuario.uf;
+
+    LOGGED.b = true;
+
+    $state.go('tab.dash');
+
+  };
+
   $scope.settings = {
     enableFriends: true
   };
+
 });

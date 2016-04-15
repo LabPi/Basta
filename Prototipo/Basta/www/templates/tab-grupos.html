@@ -1,7 +1,4 @@
 <ion-view view-title="Grupos">
-            <!--<ion-nav-buttons side="right">
-                <button class="button button-icon ion-ios-plus-empty" ui-sref="tabs.lead_detail"></button>
-            </ion-nav-buttons>-->
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="grupo in grupos" type="item-text-wrap" href="#/tab/grupos/{{grupo.id}}">
@@ -13,7 +10,7 @@
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button ng-if="usuario.id!=0" class="button-calm" ng-click="inscrever(grupo)">
-          Inscrever
+          Participar
         </ion-option-button>
       </ion-item>
     </ion-list>

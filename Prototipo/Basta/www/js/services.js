@@ -1,5 +1,41 @@
 angular.module('starter.services', [])
 
+.factory('Emendas', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var emendas = [
+      {numero: '38290001', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 59.000,00', proponente: 'HENRIQUE MARTIN'},
+      {numero: '38290001', objeto: 'Pavimentação e recape de vias urbanas em Jundiaí-SP.', valor_repasse: 'R$ 592.000,00', proponente: 'MARTA MARTIN'},
+      {numero: '34290001', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 92.000,00', proponente: 'JOAO MARTIN'},
+      {numero: '38290601', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 52.000,00', proponente: 'HENRIQUE MARTIN'},
+      {numero: '33290001', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 512.000,00', proponente: 'CIRLEI MARTIN'},
+      {numero: '38290501', objeto: 'Pavimentação e recape de vias urbanas em Salto-SP.', valor_repasse: 'R$ 592.000,00', proponente: 'HENRIQUE MARTIN'},
+      {numero: '28290001', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 592.000,00', proponente: 'HENRIQUE MARTIN'},
+      {numero: '38290001', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 32.000,00', proponente: 'HENRIQUE MARTIN'},
+      {numero: '18290401', objeto: 'Pavimentação e recape de vias urbanas em Campinas-SP.', valor_repasse: 'R$ 592.000,00', proponente: 'JOSE MARTIN'},
+      {numero: '38290001', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 292.000,00', proponente: 'HENRIQUE MARTIN'},
+      {numero: '38290301', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 252.000,00', proponente: 'HENRIQUE MARTIN'},
+  ];
+
+  return {
+    all: function() {
+      return emendas;
+    },
+    last: function(n) {
+      return emendas.slice(0, n-1);
+    },
+    get: function(emendaId) {
+      for (var i = 0; i < emendas.length; i++) {
+        if (emendas[i].id === emendaId) {
+          return emendas[i];
+        }
+      }
+      return null;
+    }
+  };
+})
+
 .factory('Grupos', function() {
   // Might use a resource here that returns a JSON array
 
@@ -142,6 +178,9 @@ angular.module('starter.services', [])
         }
       }
       return null;
+    },
+    logged: function() {
+      return usuarios[0].id != 0;
     }
   };
 });

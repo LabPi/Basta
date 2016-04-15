@@ -23,7 +23,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.constant('LOGGED', {b:false})
+
+.config(function($compileProvider, $stateProvider, $urlRouterProvider, $ionicConfigProvider, LOGGED) {
+
+    $compileProvider.imgSrcSanitizationWhitelist(/^\s*(http|https?|ftp|mailto|file|tel|ms-appdata|data):/);
+
+    $ionicConfigProvider.views.swipeBackEnabled(false);
+
+    $ionicConfigProvider.views.maxCache(0);
+
+    $ionicConfigProvider.backButton.previousTitleText(false);
+
+    //$ionicConfigProvider.backButton.text('Voltar').icon('ion-ios-arrow-left');
+    $ionicConfigProvider.backButton.text('').icon('ion-ios-arrow-left');
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -60,7 +73,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
+/*  .state('tab.chats', {
       url: '/chats',
       views: {
         'tab-chats': {
@@ -77,7 +90,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'ChatDetailCtrl'
         }
       }
-    })
+    })*/
 
   .state('tab.grupos', {
       url: '/grupos',
@@ -102,7 +115,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/perfil',
     views: {
       'tab-perfil': {
-        templateUrl: 'templates/tab-perfil.html',
+        templateUrl: function() {
+          return LOGGED.b ? 'templates/tab-perfil.html' : 'templates/tab-login.html';
+        },
         controller: 'PerfilCtrl'
       }
     }

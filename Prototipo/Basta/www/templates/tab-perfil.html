@@ -1,9 +1,50 @@
-<ion-view view-title="Meu perfil">
+<ion-view view-title="Meu perfil" ng-form name="frmPerfil">
+
+  <ion-nav-buttons side="right">
+      <button class="button button-icon ion-ios-checkmark-empty" ng-click="doSave(frmPerfil)"></button>
+  </ion-nav-buttons>
+
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
+    <div style="text-align:center;margin: 0px -12px 12px -12px; padding: 8px 0 4px 0; background-color: #33cd5f;">
+    <img ng-src="img/max.png" style="width: 48px; height: 48px; border-radius: 50%;">
+    <h4 style="margin: 4px 0">
+      {{usuario.nome}}
+    </h4>
+    </div>
+
+
+                <form novalidate name="_frmPerfil">
+                    <div class="list">
+                        <label class="item item-input item-floating-label with-icon transparent">
+                            <span class="input-label my-input-label">Nome</span>
+                            <input type="text" class="my-input" focus="nome" required autocomplete="off" name="nome" maxlength="50" placeholder="Nome" ng-model="usuario.nome">
+                        </label>
+
+                        <label class="item item-input item-floating-label with-icon transparent">
+                            <span class="input-label my-input-label">Cidade</span>
+                            <input type="text" class="my-input" focus="cidade" required autocomplete="off" name="cidade" maxlength="60" placeholder="Cidade" ng-model="usuario.cidade">
+                        </label>
+
+                        <label class="item item-input item-floating-label with-icon transparent">
+                            <span class="input-label my-input-label">UF</span>
+                            <input type="text" class="my-input" focus="uf" required autocomplete="off" name="uf" maxlength="60" placeholder="UF" ng-model="usuario.uf">
+                        </label>
+
+                        <label class="item item-input item-floating-label with-icon transparent">
+                            <span class="input-label my-input-label">E-mail</span>
+                            <input type="text" class="my-input" focus="email" required autocomplete="off" name="email" maxlength="255" placeholder="E-mail" ng-model="usuario.email">
+                        </label>
+
+                        <label class="item item-input item-floating-label with-icon transparent">
+                            <span class="input-label my-input-label">Senha</span>
+                            <input type="password" class="my-input" focus="senha" required autocomplete="off" name="senha" maxlength="20" placeholder="Senha" ng-model="usuario.senha">
+                        </label>
+
+                        <label class="item item-input item-floating-label with-icon transparent">
+                            <span class="input-label my-input-label">Senha</span>
+                            <input type="password" class="my-input" focus="confirmasenha" required autocomplete="off" name="confirmasenha" maxlength="20" placeholder="Confirma senha" ng-model="usuario.confirmasenha">
+                        </label>
+                    </div>
+                </form>
   </ion-content>
 </ion-view>
