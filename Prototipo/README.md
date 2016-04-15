@@ -12,7 +12,7 @@ Este mesmo projeto, pode ser facilmente reaproveitado para plataforma Android, t
 Não é contemplado, dados vivos nem algum serviço backend para os dados simulados. Os dados são hardcode.
 
 
-## Como instalar ?
+## Como instalar e/ou testar
 
 Se você pretente alterar o projeto ou executá-lo dentro de um ambiente Cordova/Ionic, precisará instalar o [NodeJS][nodejs] (use a versão LTS), o [Cordova][cordova] e por último o framework [Ionic][ionic]. 
 
