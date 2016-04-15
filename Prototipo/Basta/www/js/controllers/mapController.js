@@ -21,7 +21,6 @@ angular.module('starter').controller('MapController',
       /**
        * Once state loaded, get put map on scope.
        */
-      $scope.map2 = LOGGED.m;
 
       if($scope.map)
         $scope.map.baseLayer().redraw();
@@ -59,8 +58,6 @@ angular.module('starter').controller('MapController',
               }
             }
           };
-
-          $scope.map2 = LOGGED.m = true;
 
           $scope.goTo(0);
         }

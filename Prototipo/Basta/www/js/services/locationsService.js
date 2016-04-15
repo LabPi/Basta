@@ -9,7 +9,6 @@ angular.module('starter').factory('LocationsService', [ function() {
       lng : -47.884544
     },
 
-
   ];
 
   return locationsObj;

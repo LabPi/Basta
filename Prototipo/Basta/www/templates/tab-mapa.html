@@ -1,8 +1,7 @@
 <ion-view cache-view="true" view-title="Mapa">
   <ion-nav-buttons side="right">
-      <button class="button button-icon ion-ios-location-outline" ng-if="usuario.id!=0" ng-click="locate()"></button>
+    <button class="button button-icon ion-ios-location-outline" ng-if="usuario.id!=0" ng-click="locate()"></button>
   </ion-nav-buttons>
-
   <ion-content data-tap-disabled="true">
     <leaflet defaults="map.defaults" center="map.center" markers="map.markers" ng-if="map"></leaflet>
   </ion-content>

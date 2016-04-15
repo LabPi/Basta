@@ -3,7 +3,6 @@ angular.module('starter.services', [])
 .factory('Emendas', function() {
   // Might use a resource here that returns a JSON array
 
-  // Some fake testing data
   var emendas = [
       {numero: '38290001', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 59.000,00', proponente: 'HENRIQUE MARTIN'},
       {numero: '38290001', objeto: 'Pavimentação e recape de vias urbanas em Jundiaí-SP.', valor_repasse: 'R$ 592.000,00', proponente: 'MARTA MARTIN'},
@@ -201,4 +200,5 @@ angular.module('starter.services', [])
       return usuarios[0].id != 0;
     }
   };
+
 });
