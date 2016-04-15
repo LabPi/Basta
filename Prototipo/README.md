@@ -19,4 +19,6 @@ Não é contemplado, dados vivos nem algum serviço backend para os dados simula
 
 ## Licença
 
-Este projeto de software é licenciado sob a GPL v2.0 ou superior / [GNU General Public License v2.0][gpl2_license]
+Este projeto de software é licenciado sob a [GPL v2.0 ou superior / GNU General Public License v2.0][gpl-2.0].
+
+[gpl-2.0]: https://opensource.org/licenses/GPL-2.0
