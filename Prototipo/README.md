@@ -12,6 +12,19 @@ Este mesmo projeto, pode ser facilmente reaproveitado para plataforma Android, t
 Não é contemplado, dados vivos nem algum serviço backend para os dados simulados. Os dados são hardcode.
 
 
+## Como instalar ?
+
+Se você pretente alterar o projeto ou executá-lo dentro de um ambiente Cordova/Ionic, precisará instalar o [NodeJS][nodejs] (use a versão LTS), o [Cordova][cordova] e por último o framework [Ionic][ionic]. 
+
+Após isto, mova-se até a pasta `/Basta/Prototipo/Basta` através do prompt de shell de seu sistema operacional e execute o comando: `ionic serve`.
+
+Desta maneira você poderá simular a app em um browser.
+
+Se preferir, poderá ver a app simulando iOS e Android, lado a lado com o comando: `ionic serve --lab`
+
+Se pretente somente funcionar a app, lembre-se que este é um projeto HTML. Portanto, vá até a pasta `/Basta/Prototipo/Basta/www` e abra o arquivo `index.html` em seu browser.
+
+
 ## Contribua!
 
 1. Faça um fork deste projeto
@@ -28,4 +41,5 @@ Este projeto de software é licenciado sob a [GPL v2.0 ou superior / GNU General
 [angular]: https://angularjs.org/
 [leafletjs]: http://leafletjs.com/
 [openstreetmap]: http://www.openstreetmap.org/copyright
+[nodejs]: https://nodejs.org/en/
 [gpl-2.0]: https://opensource.org/licenses/GPL-2.0
