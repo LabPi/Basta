@@ -11,7 +11,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('GruposCtrl', function($scope, Grupos, Usuarios) {
+.controller('GruposCtrl', function($scope, $ionicListDelegate, Grupos, Usuarios) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -24,8 +24,14 @@ angular.module('starter.controllers', [])
   $scope.usuario = Usuarios.get(-1);
 
   $scope.inscrever = function(grupo) {
+    $ionicListDelegate.closeOptionButtons();
     Grupos.inscrever(grupo.id, Usuarios.get(-1));
   };
+
+  $scope.notIn = function(grupo) {
+    return $scope.usuario.id != 0 && !Grupos.contain($scope.usuario.id, grupo);
+  };
+
 })
 
 .controller('GrupoDetailCtrl', function($scope, $stateParams, Grupos, Usuarios) {
@@ -33,6 +39,10 @@ angular.module('starter.controllers', [])
   $scope.usuario = Usuarios.get(-1);
 
   $scope.grupo = Grupos.get($stateParams.grupoId);
+
+  $scope.notIn = function() {
+    return $scope.usuario.id != 0 && !Grupos.contain($scope.usuario.id, $scope.grupo);
+  };
 
   $scope.inscrever = function(grupo) {
     Grupos.inscrever(grupo.id, Usuarios.get(-1));

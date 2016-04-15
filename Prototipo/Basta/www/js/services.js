@@ -61,7 +61,7 @@ angular.module('starter.services', [])
       {numero: '38290001', objeto: 'Pavimentação e recape de vias urbanas em Cabreúva-SP.', valor_repasse: 'R$ 592.000,00', proponente: 'HENRIQUE MARTIN'},
     ],
     membros: [
-    {id: 1, nome: 'João Silva', email: 'joaosilva@dominio.com.br', cidade: 'Brasília', uf: 'DF' },
+    {id: 9, nome: 'João Silva', email: 'joaosilva@dominio.com.br', cidade: 'Brasília', uf: 'DF' },
     {id: 2, nome: 'Maria Souza', email: 'mariasouza@dominio.com.br', cidade: 'Taguatinga', uf: 'DF' },
     ]
   }, {
@@ -142,6 +142,24 @@ angular.module('starter.services', [])
         }
       }
       return null;
+    },
+    contain: function(usuarioId, grupo) {
+      if(grupo) {
+        for (var ii = 0; ii < grupo.membros.length; ii++) {
+          if (grupo.membros[ii].id === usuarioId) {
+            return true;
+          }
+        }
+      } else {
+        for (var i = 0; i < grupos.length; i++) {
+          for (var ii = 0; ii < grupos[i].membros.length; ii++) {
+            if (grupos[i].membros[ii].id === usuarioId) {
+              return true;
+            }
+          }
+        }
+      }
+      return false;
     }
   };
 })

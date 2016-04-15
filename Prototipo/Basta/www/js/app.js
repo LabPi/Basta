@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'leaflet-directive', 'ngCordova', 'igTruncate'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,7 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.constant('LOGGED', {b:false})
+.constant('LOGGED', {b:false, m:false})
 
 .config(function($compileProvider, $stateProvider, $urlRouterProvider, $ionicConfigProvider, LOGGED) {
 
@@ -31,7 +31,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     $ionicConfigProvider.views.swipeBackEnabled(false);
 
-    $ionicConfigProvider.views.maxCache(0);
+    $ionicConfigProvider.views.maxCache(1);
 
     $ionicConfigProvider.backButton.previousTitleText(false);
 
@@ -68,7 +68,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-mapa': {
         templateUrl: 'templates/tab-mapa.html',
-        controller: 'MapaCtrl'
+        controller: 'MapController'
       }
     }
   })

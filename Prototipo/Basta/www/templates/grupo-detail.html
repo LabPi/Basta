@@ -4,9 +4,9 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{grupo.nome}}">
+<ion-view cache-view="false" view-title="{{grupo.nome}}">
   <ion-nav-buttons side="right">
-      <button class="button button-icon ion-ios-plus-empty" ng-if="usuario.id!=0" ng-click="inscrever(grupo)"></button>
+      <button class="button button-icon ion-ios-plus-empty" ng-if="notIn()" ng-click="inscrever(grupo)"></button>
   </ion-nav-buttons>
 
   <ion-content class="padding">
