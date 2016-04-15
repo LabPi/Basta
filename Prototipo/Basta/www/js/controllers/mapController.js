@@ -22,9 +22,6 @@ angular.module('starter').controller('MapController',
        * Once state loaded, get put map on scope.
        */
 
-      if($scope.map)
-        $scope.map.baseLayer().redraw();
-
       $scope.$on("$stateChangeSuccess", function() {
 
         if(!$scope.map)
@@ -48,6 +45,8 @@ angular.module('starter').controller('MapController',
           };
 
           $scope.goTo(0);
+        } else {
+          $scope.map.baseLayer().redraw();
         }
 
       });
